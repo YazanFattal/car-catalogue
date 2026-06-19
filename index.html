@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Catalogue</title>
+
+  <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css " />
+</head>
+<body>
+
+  <header>
+    <h1>Car Catalogue</h1>
+    <p>Select a region to explore car brands</p>
+  </header>
+
+  <main>
+    <section class="regions">
+      <button onclick="showBrands('USA')">🇺🇸 USA</button>
+      <button onclick="showBrands('Europe')">🇪🇺 Europe</button>
+      <button onclick="showBrands('Asia')">🌏 Asia</button>
+    </section>
+
+    <section>
+      <h2 id="section-title">Choose a region</h2>
+      <div id="brands-container" class="grid"></div>
+    </section>
+
+    <section>
+      <h2 id="cars-title"></h2>
+      <div id="cars-container" class="grid"></div>
+    </section>
+  </main>
+
+   <!-- Mustang Sound -->
+<audio id="mustangSound" src="sounds/mustang.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
