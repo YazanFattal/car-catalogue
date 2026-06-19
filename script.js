@@ -188,11 +188,18 @@ function showCars(region, brand) {
 `;
 
     carCard.addEventListener("click", () => {
-      if (car.name === "Mustang") {
-        sound.currentTime = 0;
-        sound.play();
-      }
-    });
+  if (car.name === "Mustang") {
+    const sound = document.getElementById("mustangSound");
+    sound.currentTime = 0;
+    sound.play();
+  }
+
+  if (car.name === "Blazer") {
+    const sound = document.getElementById("blazerSound");
+    sound.currentTime = 0;
+    sound.play();
+  }
+});
 
     carsContainer.appendChild(carCard);
   });
