@@ -16,6 +16,23 @@ const carData = {
         price: "€65,000"
       }
     ],
+    Chevrolet: [
+    {
+      name: "Blazer",
+      image: "images/cars/blazer.png",
+      power: "308 HP",
+      size: "Mid-Size SUV",
+      price: "€42,000"
+    },
+    {
+      name: "Tahoe",
+      image: "images/cars/tahoe.png",
+      power: "355 HP",
+      size: "Full-Size SUV",
+      price: "€68,000"
+    }
+  ],
+
     Tesla: [
       {
         name: "Model 3",
@@ -107,6 +124,7 @@ const carData = {
 
 const brandLogos = {
   Ford: "images/logos/ford.png",
+  Chevrolet: "images/logos/chevrolet.png",
   Tesla: "images/logos/tesla.png",
   BMW: "images/logos/bmw.png",
   Mercedes: "images/logos/mercedes.png",
