@@ -18,15 +18,13 @@ const carData = {
     ],
     Chevrolet: [
     {
-  name: "Blazer",
-  images: [
-    "images/cars/blazer.png",
-    "images/cars/blazer-rear.png"
-  ],
-  power: "308 HP",
-  size: "SUV",
-  price: "€42,000"
-}
+      name: "Blazer",
+      image:[ "images/cars/blazer.png",
+            "images/cars/blazer-rear.png"],
+      power: "308 HP",
+      size: "Mid-Size SUV",
+      price: "€42,000"
+    },
     {
       name: "Tahoe",
       image: "images/cars/tahoe.png",
