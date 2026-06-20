@@ -10,7 +10,7 @@ const carData = {
       },
       {
         name: "F-150",
-        image: "🛻",
+        image: "images/cars/f150.png",
         power: "400 HP",
         size: "Pickup Truck",
         price: "€65,000"
@@ -23,7 +23,7 @@ const carData = {
       power: "308 HP",
       size: "Mid-Size SUV",
       price: "€42,000"
-},
+    },
     {
       name: "Tahoe",
       image: "images/cars/tahoe.png",
@@ -33,20 +33,13 @@ const carData = {
     }
   ],
 
-    Tesla: [
+    Dodge: [
       {
-        name: "Model 3",
-        image: "🚗",
-        power: "283 HP",
-        size: "Sedan",
-        price: "€42,000"
-      },
-      {
-        name: "Model X",
-        image: "🚙",
-        power: "670 HP",
-        size: "SUV",
-        price: "€95,000"
+      name: "Charger Scat Pack",
+      image: "images/cars/charger.png",
+      power: "485 HP",
+      size: "Muscle Sedan",
+      price: "€62,000"
       }
     ]
   },
@@ -125,7 +118,7 @@ const carData = {
 const brandLogos = {
   Ford: "images/logos/ford.png",
   Chevrolet: "images/logos/chevrolet.png",
-  Tesla: "images/logos/tesla.png",
+  Dodge: "images/logos/dodge.png",
   BMW: "images/logos/bmw.png",
   Mercedes: "images/logos/mercedes.png",
   Toyota: "images/logos/toyota.png",
