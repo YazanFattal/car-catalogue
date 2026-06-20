@@ -45,17 +45,27 @@ const carData = {
   },
 
   Europe: {
+
+    Porsche: [
+      {
+      name: "Porsche 911 Carrera S",
+      image: "images/cars/porsche911.png",
+      power: "450 HP",
+      size: "Sports Coupe",
+      price: "€145,000"
+      }
+    ],
     BMW: [
       {
         name: "BMW M4",
-        image: "🏎️",
+        image: "images/cars/BMWm4.png",
         power: "503 HP",
         size: "Coupe",
         price: "€105,000"
       },
       {
         name: "BMW X5",
-        image: "🚙",
+        image: "images/cars/BMWx5.png",
         power: "375 HP",
         size: "SUV",
         price: "€90,000"
@@ -119,6 +129,7 @@ const brandLogos = {
   Ford: "images/logos/ford.png",
   Chevrolet: "images/logos/chevrolet.png",
   Dodge: "images/logos/dodge.png",
+  Porsche: "images/logos/porsche.png",
   BMW: "images/logos/bmw.png",
   Mercedes: "images/logos/mercedes.png",
   Toyota: "images/logos/toyota.png",
