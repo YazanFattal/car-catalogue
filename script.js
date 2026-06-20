@@ -19,8 +19,10 @@ const carData = {
     Chevrolet: [
     {
       name: "Blazer",
-      image:[ "images/cars/blazer.png",
-            "images/cars/blazer-rear.png"],
+      images: [
+    "images/cars/blazer-front.png",
+    "images/cars/blazer-back.png"
+  ],
       power: "308 HP",
       size: "Mid-Size SUV",
       price: "€42,000"
@@ -176,8 +178,13 @@ function showCars(region, brand) {
 
     carCard.innerHTML = `
   <div class="car-image">
-    <img src="${car.image}" alt="${car.name}">
+    <img class="car-img" src="${car.images[0]}" alt="${car.name}">
     <div class="sound-indicator">🔊 Hear sound</div>
+
+    <div class="image-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 
   <div class="car-info">
