@@ -93,14 +93,14 @@ const carData = {
     Toyota: [
       {
         name: "Supra",
-        image: "🏎️",
+        image: "images/cars/supra.png",
         power: "382 HP",
         size: "Sports Car",
         price: "€70,000"
       },
       {
         name: "Corolla",
-        image: "🚗",
+        image: "images/cars/corolla.png",
         power: "169 HP",
         size: "Sedan",
         price: "€32,000"
@@ -109,14 +109,14 @@ const carData = {
     Nissan: [
       {
         name: "GT-R",
-        image: "🏎️",
+        image: "images/cars/GTR.png",
         power: "565 HP",
         size: "Sports Car",
         price: "€120,000"
       },
       {
         name: "Qashqai",
-        image: "🚙",
+        image: "images/cars/qashqai.png",
         power: "158 HP",
         size: "SUV",
         price: "€38,000"
