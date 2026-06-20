@@ -19,14 +19,11 @@ const carData = {
     Chevrolet: [
     {
       name: "Blazer",
-      images: [
-    "images/cars/blazer-front.png",
-    "images/cars/blazer-back.png"
-  ],
+      image: "images/cars/blazer.png",
       power: "308 HP",
       size: "Mid-Size SUV",
       price: "€42,000"
-    },
+},
     {
       name: "Tahoe",
       image: "images/cars/tahoe.png",
@@ -167,7 +164,6 @@ function showBrands(region) {
 function showCars(region, brand) {
   const carsContainer = document.getElementById("cars-container");
   const carsTitle = document.getElementById("cars-title");
-  const sound = document.getElementById("mustangSound");
 
   carsContainer.innerHTML = "";
   carsTitle.textContent = `${brand} Cars`;
@@ -176,38 +172,37 @@ function showCars(region, brand) {
     const carCard = document.createElement("div");
     carCard.className = "car-card";
 
+    const image = car.image;
+
     carCard.innerHTML = `
-  <div class="car-image">
-    <img class="car-img" src="${car.images[0]}" alt="${car.name}">
-    <div class="sound-indicator">🔊 Hear sound</div>
+      <div class="car-image">
+      <img src="${image}" alt="${car.name}">
+      </div>
 
-    <div class="image-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-    </div>
-  </div>
-
-  <div class="car-info">
-    <h3>${car.name}</h3>
-    <p><strong>Power:</strong> ${car.power}</p>
-    <p><strong>Size:</strong> ${car.size}</p>
-    <p><strong>Price:</strong> ${car.price}</p>
-  </div>
-`;
+      <div class="car-info">
+        <h3>${car.name}</h3>
+        <p><strong>Power:</strong> ${car.power}</p>
+        <p><strong>Size:</strong> ${car.size}</p>
+        <p><strong>Price:</strong> ${car.price}</p>
+      </div>
+    `;
 
     carCard.addEventListener("click", () => {
-  if (car.name === "Mustang") {
-    const sound = document.getElementById("mustangSound");
-    sound.currentTime = 0;
-    sound.play();
-  }
+      let sound = null;
 
-  if (car.name === "Blazer") {
-    const sound = document.getElementById("blazerSound");
-    sound.currentTime = 0;
-    sound.play();
-  }
-});
+      if (car.name === "Mustang") {
+        sound = document.getElementById("mustangSound");
+      }
+
+      if (car.name === "Blazer") {
+        sound = document.getElementById("blazerSound");
+      }
+
+      if (sound) {
+        sound.currentTime = 0;
+        sound.play();
+      }
+    });
 
     carsContainer.appendChild(carCard);
   });
