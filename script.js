@@ -74,14 +74,14 @@ const carData = {
     Mercedes: [
       {
         name: "AMG GT",
-        image: "🏎️",
+        image: "images/cars/AMGgt.png",
         power: "577 HP",
         size: "Sports Car",
         price: "€160,000"
       },
       {
         name: "C-Class",
-        image: "🚗",
+        image: "images/cars/MercedesC.png",
         power: "255 HP",
         size: "Sedan",
         price: "€55,000"
