@@ -190,6 +190,11 @@ function showCars(region, brand) {
         <p><strong>Price:</strong> ${car.price}</p>
       </div>
     `;
+    const img = carCard.querySelector("img");
+
+    img.onload = () => {
+    img.classList.add("loaded");
+      };
 
     carCard.addEventListener("click", () => {
       let sound = null;
@@ -211,3 +216,4 @@ function showCars(region, brand) {
     carsContainer.appendChild(carCard);
   });
 }
+
