@@ -244,3 +244,59 @@ h2 {
   }
 }
 
+.modal {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.85);
+
+  z-index: 9999;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+
+  width: 90%;
+  max-width: 900px;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 500px;
+
+  object-fit: contain;
+}
+
+.close-modal {
+  float: right;
+
+  font-size: 35px;
+
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

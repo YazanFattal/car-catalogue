@@ -190,11 +190,31 @@ function showCars(region, brand) {
         <p><strong>Price:</strong> ${car.price}</p>
       </div>
     `;
+
+    const images = carCard.querySelectorAll(".car-image img");
+
+images.forEach(img => {
+  if (img.complete) {
+    img.classList.add("loaded");
+  } else {
+    img.addEventListener("load", () => {
+      img.classList.add("loaded");
+    });
+  }
+});
     const img = carCard.querySelector("img");
 
-    img.onload = () => {
-    img.classList.add("loaded");
-      };
+    carCard.addEventListener("click", () => {
+    openCarModal(car);
+    });
+
+    document.querySelector(".close-modal")
+    .addEventListener("click", () => {
+
+    document.getElementById("carModal")
+    .style.display = "none";
+
+});
 
     carCard.addEventListener("click", () => {
       let sound = null;
@@ -215,5 +235,23 @@ function showCars(region, brand) {
 
     carsContainer.appendChild(carCard);
   });
+}
+
+function openCarModal(car) {
+
+  document.getElementById("modalImage").src = car.image;
+
+  document.getElementById("modalName").textContent = car.name;
+
+  document.getElementById("modalPower").textContent =
+    "Power: " + car.power;
+
+  document.getElementById("modalSize").textContent =
+    "Size: " + car.size;
+
+  document.getElementById("modalPrice").textContent =
+    "Price: " + car.price;
+
+  document.getElementById("carModal").style.display = "flex";
 }
 
