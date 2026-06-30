@@ -227,6 +227,14 @@ images.forEach(img => {
         sound = document.getElementById("blazerSound");
       }
 
+      if (car.name === "Porsche 911 Carrera S") {
+        sound = document.getElementById("porsche911Sound");
+      }
+
+      if (car.name === "Supra") {
+        sound = document.getElementById("supraSound");
+      }
+
       if (sound) {
         sound.currentTime = 0;
         sound.play();
