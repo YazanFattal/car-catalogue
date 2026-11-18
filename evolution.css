@@ -5,7 +5,7 @@
 .e-back {
   display: flex;
   gap: 18px;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -29,13 +29,13 @@
   margin-bottom: 24px;
 }
 .e-hero-copy > p:not(.eyebrow) {
-  color: #667588;
-  font-size: 14px;
+  color: #43556a;
+  font-size: 18px;
   line-height: 1.9;
   margin-bottom: 30px;
 }
 .e-hero .eyebrow {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.6px;
 }
 .e-hero-art {
@@ -71,9 +71,9 @@
   gap: 7px;
 }
 .e-hero-caption > span {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1.8px;
-  color: #667588;
+  color: #43556a;
 }
 .e-hero-caption > strong {
   font: 600 20px var(--display);
@@ -96,14 +96,14 @@
   margin-top: 32px;
 }
 .e-hero-baseline > p {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1.5px;
-  color: #667588;
+  color: #43556a;
   margin: 0;
 }
 .e-hero-baseline > span {
-  font-size: 11px;
-  color: #667588;
+  font-size: 16px;
+  color: #43556a;
 }
 .e-hero-baseline b {
   font-weight: 400;
@@ -122,8 +122,8 @@
   margin-bottom: 28px;
 }
 .e-section-intro .eyebrow {
-  font-size: 9px;
-  color: #667588;
+  font-size: 12px;
+  color: #43556a;
   margin-bottom: 10px;
 }
 .e-section-intro h2 {
@@ -132,8 +132,8 @@
   margin: 0;
 }
 .e-section-intro > p {
-  font-size: 12px;
-  color: #667588;
+  font-size: 16px;
+  color: #43556a;
   margin: 0 0 5px;
 }
 .e-decade-nav {
@@ -152,7 +152,7 @@
   gap: 8px;
   background: #fff;
   padding: 18px 6px;
-  font: 600 14px var(--display);
+  font: 600 18px var(--display);
   border-right: 1px solid var(--line);
   transition:
     background 0.2s,
@@ -169,7 +169,7 @@
   background: var(--pale);
 }
 .e-decade-nav > button > span {
-  font: 600 6px var(--font);
+  font: 600 12px var(--font);
   letter-spacing: 1px;
   align-self: center;
 }
@@ -199,13 +199,13 @@
   letter-spacing: -3px;
 }
 .e-era-number > p {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 1px;
-  color: #667588;
+  color: #43556a;
   margin: 12px 0 16px;
 }
 .e-status {
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
   background: var(--pale);
@@ -214,8 +214,8 @@
   display: inline-block;
 }
 .e-era-copy > .eyebrow {
-  font-size: 9px;
-  color: #667588;
+  font-size: 12px;
+  color: #43556a;
   letter-spacing: 1.5px;
   margin-bottom: 13px;
   text-transform: uppercase;
@@ -226,8 +226,8 @@
   margin-bottom: 17px;
 }
 .e-era-copy > p:not(.eyebrow) {
-  font-size: 14px;
-  color: #667588;
+  font-size: 18px;
+  color: #43556a;
   line-height: 1.85;
   max-width: 690px;
   margin-bottom: 20px;
@@ -238,11 +238,11 @@
   flex-wrap: wrap;
 }
 .e-tags > span {
-  font-size: 9px;
+  font-size: 12px;
   border: 1px solid var(--line);
   padding: 7px 10px;
   border-radius: 3px;
-  color: #5b7086;
+  color: #40556e;
 }
 .is-future .e-era-number > #era-number {
   font-size: 83px;
@@ -262,16 +262,16 @@
   margin-bottom: 34px;
 }
 .e-change-grid > div > span {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.2px;
-  color: #667588;
+  color: #43556a;
 }
 .e-change-grid p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.8;
   margin: 12px 0 0;
-  color: #4f657d;
+  color: #3e526b;
 }
 .e-cars-heading {
   display: flex;
@@ -286,8 +286,8 @@
   margin: 0;
 }
 .e-cars-heading p {
-  font-size: 10px;
-  color: #667588;
+  font-size: 14px;
+  color: #43556a;
   margin: 0;
 }
 .e-car-grid {
@@ -309,7 +309,8 @@
   box-shadow: 0 12px 24px #122b4a0b;
 }
 .e-car-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   width: 100%;
   height: 100%;
@@ -318,6 +319,7 @@
 }
 .e-car-photo {
   display: block;
+  flex: none;
   position: relative;
   height: 220px;
   background: #eef2f6;
@@ -337,37 +339,38 @@
   color: var(--navy);
   padding: 6px 9px;
   border-radius: 2px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.7px;
 }
 .e-car-info {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 9px;
   padding: 22px;
   min-height: 245px;
 }
 .e-card-kicker {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1px;
-  color: #667588;
+  color: #43556a;
   text-transform: uppercase;
 }
 .e-card-name {
   font: 700 21px/1.3 var(--display);
   letter-spacing: -0.6px;
-  min-height: 54px;
+  min-height: 2.6em;
   overflow-wrap: anywhere;
 }
 .e-card-description {
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.8;
-  color: #667588;
+  color: #43556a;
   flex: 1;
 }
 .e-card-link {
-  font-size: 10px;
+  font-size: 14px;
   display: block;
   margin-top: 8px;
   padding-top: 14px;
@@ -375,9 +378,9 @@
   font-weight: 500;
 }
 .e-date-note {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
-  color: #667588;
+  color: #43556a;
   margin: 18px 0 0;
 }
 .e-era-pagination {
@@ -394,7 +397,7 @@
   align-items: center;
   padding: 7px 0;
   background: none;
-  font-size: 11px;
+  font-size: 16px;
 }
 .e-step > span {
   font-size: 19px;
@@ -403,10 +406,10 @@
   color: #a3afbb;
 }
 .e-era-pagination > p {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1px;
   margin: 0;
-  color: #667588;
+  color: #43556a;
 }
 .e-compare {
   padding: 50px 64px 58px;
@@ -423,8 +426,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 10px;
-  color: #667588;
+  font-size: 14px;
+  color: #43556a;
 }
 .e-compare-selectors select {
   border: 1px solid #d5dfe9;
@@ -432,7 +435,7 @@
   background: #fff;
   color: var(--navy);
   padding: 10px 35px 10px 13px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 }
 .e-compare-selectors > span {
@@ -466,17 +469,17 @@
   top: 18px;
   background: #ffffffed;
   padding: 7px 12px;
-  font: 600 15px var(--display);
+  font: 600 18px var(--display);
   border-radius: 2px;
 }
 .e-compare-info {
   padding: 25px;
 }
 .e-compare-model {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #667588;
+  color: #43556a;
   margin-bottom: 10px;
 }
 .e-compare-info h3 {
@@ -486,9 +489,9 @@
 }
 .e-compare-info dl {
   display: grid;
-  grid-template-columns: 82px 1fr;
+  grid-template-columns: 110px minmax(0, 1fr);
   gap: 14px 8px;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.8;
   margin: 0;
 }
@@ -498,7 +501,7 @@
 }
 .e-compare-info dd {
   margin: 0;
-  color: #667588;
+  color: #43556a;
 }
 .e-closing {
   display: flex;
@@ -508,8 +511,8 @@
   padding: 52px 64px;
 }
 .e-closing .eyebrow {
-  font-size: 8px;
-  color: #667588;
+  font-size: 12px;
+  color: #43556a;
   margin-bottom: 12px;
 }
 .e-closing h2 {
@@ -542,8 +545,8 @@
   min-width: 0;
 }
 .e-modal-copy > .eyebrow {
-  font-size: 9px;
-  color: #667588;
+  font-size: 12px;
+  color: #43556a;
   letter-spacing: 1.2px;
   margin-bottom: 12px;
 }
@@ -554,16 +557,16 @@
   overflow-wrap: anywhere;
 }
 .e-modal-copy > #e-modal-detail {
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.9;
-  color: #667588;
+  color: #43556a;
 }
 .e-modal-copy .source-link {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 7px;
 }
 .e-modal-copy .photo-credit {
-  font-size: 9px;
+  font-size: 12px;
 }
 @media (max-width: 1100px) {
   .e-hero {
@@ -586,11 +589,11 @@
     padding: 44px 36px;
   }
   .e-back {
-    font-size: 10px;
+    font-size: 14px;
     gap: 10px;
   }
   .e-hero .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .e-era-story {
     gap: 30px;
@@ -637,7 +640,7 @@
     letter-spacing: -2px;
   }
   .e-hero-copy > p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 16px;
   }
   .e-hero-copy > p br {
     display: none;
@@ -653,11 +656,11 @@
     top: 10px;
   }
   .e-hero .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .e-hero .primary-button {
-    font-size: 10px;
+    font-size: 14px;
     gap: 17px;
     padding: 13px 16px;
   }
@@ -665,17 +668,17 @@
     margin-top: 14px;
   }
   .e-hero-baseline > p {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.7px;
   }
   .e-hero-baseline > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .e-hero-baseline b {
     margin: 0 7px;
   }
   .e-decade-nav > button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 16px 3px;
   }
   .e-decade-nav > button > span {
@@ -693,7 +696,7 @@
     font-size: 40px;
   }
   .e-era-number > p {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.7;
   }
   .is-future .e-era-number > #era-number {
@@ -704,24 +707,24 @@
     font-size: 27px;
   }
   .e-era-copy > p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 16px;
   }
   .e-era-copy > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .e-tags {
     gap: 5px;
   }
   .e-tags > span {
-    font-size: 8px;
+    font-size: 12px;
     padding: 6px;
   }
   .e-change-grid {
     gap: 18px;
   }
   .e-change-grid p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .e-car-grid {
     grid-template-columns: 1fr;
@@ -751,13 +754,13 @@
     font-size: 23px;
   }
   .e-card-description {
-    font-size: 11px;
+    font-size: 16px;
   }
   .e-cars-heading h3 {
     font-size: 17px;
   }
   .e-cars-heading p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .e-compare-info {
     padding: 20px;
@@ -779,7 +782,7 @@
     font-size: 27px;
   }
   .e-closing > .primary-button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 14px 17px;
     gap: 16px;
   }
@@ -813,12 +816,13 @@
     gap: 20px;
   }
   .evolution-page .nav-link {
-    font-size: 11px;
+    font-size: 16px;
     padding: 7px 0;
   }
   .e-back {
     display: flex;
-    font-size: 10px;
+    font-size: 12px;
+    gap: 8px;
   }
   .e-hero {
     padding: 30px 22px 0;
@@ -826,14 +830,14 @@
     gap: 0;
   }
   .e-hero .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .e-hero h1 {
     font-size: 43px;
   }
   .e-hero-copy > p:not(.eyebrow) {
-    font-size: 13px;
+    font-size: 17px;
     line-height: 1.8;
     margin-bottom: 23px;
   }
@@ -859,10 +863,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 13px;
   }
   .e-hero-caption > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .e-hero-caption > strong {
     font-size: 18px;
@@ -878,7 +882,7 @@
     font-size: 27px;
   }
   .e-section-intro .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .e-decade-nav {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -890,7 +894,7 @@
   .e-decade-nav > button {
     border: 0;
     padding: 13px 5px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .e-decade-nav > button:last-child {
     grid-column: 3/5;
@@ -898,7 +902,7 @@
   }
   .e-decade-nav > button > span {
     display: inline;
-    font-size: 6px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .e-decade-nav > button:first-child {
@@ -923,7 +927,7 @@
     border-bottom: 1px solid var(--line);
     padding: 0 0 19px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: center;
   }
   .e-era-number > #era-number {
@@ -932,15 +936,18 @@
   }
   .e-era-number > p {
     text-align: right;
-    font-size: 9px;
+    font-size: 12px;
     margin: 0;
     letter-spacing: 1px;
   }
   .e-era-number .e-status {
     justify-self: end;
     align-self: start;
-    font-size: 6px;
+    font-size: 12px;
     letter-spacing: 0.6px;
+    max-width: 100%;
+    text-align: right;
+    line-height: 1.5;
   }
   .e-era-number small {
     font-size: 42px;
@@ -953,15 +960,15 @@
     margin-bottom: 14px;
   }
   .e-era-copy > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 12px;
   }
   .e-era-copy > p:not(.eyebrow) {
-    font-size: 13px;
+    font-size: 17px;
     margin-bottom: 18px;
   }
   .e-tags > span {
-    font-size: 9px;
+    font-size: 12px;
     padding: 7px 9px;
   }
   .e-change-grid {
@@ -971,11 +978,11 @@
     margin-bottom: 28px;
   }
   .e-change-grid > div > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .e-change-grid p {
     margin-top: 6px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.75;
   }
   .e-cars-heading {
@@ -988,7 +995,7 @@
   }
   .e-cars-heading p {
     margin-top: 7px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .e-car-grid {
     gap: 20px;
@@ -1012,51 +1019,59 @@
     font-size: 24px;
   }
   .e-card-kicker {
-    font-size: 8px;
+    font-size: 12px;
   }
   .e-card-description {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.85;
   }
   .e-card-link {
     margin-top: 10px;
   }
   .e-date-note {
-    font-size: 9px;
+    font-size: 12px;
   }
   .e-era-pagination {
     margin-top: 22px;
     padding-top: 18px;
     gap: 10px;
+    flex-wrap: wrap;
   }
   .e-step {
-    font-size: 9px;
+    font-size: 12px;
     gap: 8px;
   }
   .e-step > span {
     font-size: 17px;
   }
   .e-era-pagination > p {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 0;
-    max-width: 110px;
+    max-width: none;
+    flex-basis: 100%;
+    order: -1;
     text-align: center;
   }
   .e-compare {
     padding: 32px 22px;
   }
   .e-compare-selectors {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     justify-content: space-between;
     gap: 10px;
   }
   .e-compare-selectors label {
+    display: grid;
     gap: 8px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .e-compare-selectors select {
-    font-size: 11px;
+    font-size: 16px;
     padding: 9px 14px 9px 9px;
-    max-width: 105px;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
   }
   .e-comparison-grid {
     grid-template-columns: 1fr;
@@ -1072,12 +1087,12 @@
     font-size: 25px;
   }
   .e-compare-info dl {
-    grid-template-columns: 77px 1fr;
-    gap: 13px 6px;
-    font-size: 11px;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    font-size: 16px;
   }
   .e-compare-info dd {
-    margin: 0;
+    margin: 0 0 14px;
   }
   .e-closing {
     padding: 35px 22px;
@@ -1102,9 +1117,9 @@
     max-height: 240px;
   }
   .e-modal-copy > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .e-modal-copy .source-link {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
