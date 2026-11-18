@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#122b4a" />
+    <meta
+      name="description"
+      content="Explore car evolution decade by decade, from the analogue icons of the 1970s to a clearly labelled 2030 outlook."
+    />
+    <title>Evolution — Car Catalogue</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="evolution.css" />
+    <script src="evolution-data.js" defer></script>
+    <script src="evolution.js" defer></script>
+  </head>
+  <body class="evolution-page">
+    <a class="skip-link" href="#timeline">Skip to timeline</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Car Catalogue home"
+        ><span class="monogram">CC<span>↗</span></span
+        ><span>CAR<br />CATALOGUE<span class="wordmark-dot">.</span></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="index.html#catalogue">The catalogue</a
+        ><a class="nav-link" href="evolution.html" aria-current="page"
+          >Evolution</a
+        ><a class="nav-link" href="index.html#about">About</a>
+      </nav>
+      <a class="e-back" href="index.html#catalogue"
+        >Explore the cars <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main>
+      <section class="e-hero" aria-labelledby="e-title">
+        <div class="e-hero-copy">
+          <p class="eyebrow">
+            <span class="tiny-line"></span> THE EVOLUTION OF THE AUTOMOBILE
+          </p>
+          <h1 id="e-title">
+            Every decade.<br /><span>A different drive.</span>
+          </h1>
+          <p>
+            From mechanical character to electric possibility.<br />
+            Explore the shapes, ideas and cars that moved us forward.
+          </p>
+          <a href="#timeline" class="primary-button"
+            >Travel through time <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="e-hero-art">
+          <span class="e-outline" aria-hidden="true">1970</span
+          ><img
+            id="e-hero-image"
+            alt="Classic Lamborghini Countach LP400"
+            fetchpriority="high"
+          />
+          <div class="e-hero-caption">
+            <span>THEN. NOW. WHAT’S NEXT.</span
+            ><strong>1970 <i aria-hidden="true">⟶</i> 2030</strong>
+          </div>
+        </div>
+        <div class="e-hero-baseline">
+          <p>A SELECTED HISTORY, ONE DECADE AT A TIME</p>
+          <span>06 decades of history <b>+</b> 01 future outlook</span>
+        </div>
+      </section>
+      <section
+        class="e-timeline"
+        id="timeline"
+        aria-labelledby="timeline-title"
+      >
+        <div class="e-section-intro">
+          <div>
+            <p class="eyebrow">FOLLOW THE CHANGE</p>
+            <h2 id="timeline-title">Choose your era.</h2>
+          </div>
+          <p>Same curiosity. A whole new perspective.</p>
+        </div>
+        <div class="e-decade-nav" role="tablist" aria-label="Choose a decade">
+          <button
+            id="tab-1970s"
+            role="tab"
+            aria-selected="true"
+            aria-controls="era-panel"
+            tabindex="0"
+            data-era="1970s"
+          >
+            1970s
+          </button>
+          <button
+            id="tab-1980s"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="1980s"
+          >
+            1980s
+          </button>
+          <button
+            id="tab-1990s"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="1990s"
+          >
+            1990s
+          </button>
+          <button
+            id="tab-2000s"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="2000s"
+          >
+            2000s
+          </button>
+          <button
+            id="tab-2010s"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="2010s"
+          >
+            2010s
+          </button>
+          <button
+            id="tab-2020s"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="2020s"
+          >
+            2020s
+          </button>
+          <button
+            id="tab-2030"
+            role="tab"
+            aria-selected="false"
+            aria-controls="era-panel"
+            tabindex="-1"
+            data-era="2030"
+          >
+            2030 <span>OUTLOOK</span>
+          </button>
+        </div>
+        <div
+          id="era-panel"
+          role="tabpanel"
+          aria-labelledby="tab-1970s"
+          tabindex="0"
+        >
+          <div class="e-era-story">
+            <div class="e-era-number">
+              <span id="era-number" aria-hidden="true">70<span>s</span></span>
+              <p id="era-range"></p>
+              <span id="era-status" class="e-status">HISTORICAL OVERVIEW</span>
+            </div>
+            <div class="e-era-copy">
+              <p class="eyebrow" id="era-subtitle"></p>
+              <h2 id="era-title"></h2>
+              <p id="era-summary"></p>
+              <div id="era-tags" class="e-tags"></div>
+            </div>
+          </div>
+          <div class="e-change-grid">
+            <div>
+              <span>01 / DESIGN</span>
+              <p id="era-design"></p>
+            </div>
+            <div>
+              <span>02 / TECHNOLOGY</span>
+              <p id="era-technology"></p>
+            </div>
+            <div>
+              <span>03 / THE EXPERIENCE</span>
+              <p id="era-experience"></p>
+            </div>
+          </div>
+          <div class="e-cars-heading">
+            <h3 id="era-cars-title">Cars that tell the story</h3>
+            <p id="era-cars-note">Three perspectives on the decade.</p>
+          </div>
+          <div id="era-cars" class="e-car-grid"></div>
+          <p class="e-date-note">
+            Years identify a model or generation launch, market introduction or
+            concept reveal. Photos illustrate that model or generation and may
+            show a later example. Follow each car’s source for context.
+          </p>
+        </div>
+        <div class="e-era-pagination">
+          <button id="era-prev" class="e-step" disabled>
+            <span aria-hidden="true">←</span> Previous era
+          </button>
+          <p id="era-position" role="status" aria-live="polite">01 / 07</p>
+          <button id="era-next" class="e-step">
+            Next era <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+      <section class="e-compare" id="compare" aria-labelledby="compare-title">
+        <div class="e-section-intro">
+          <div>
+            <p class="eyebrow">PUT TIME SIDE BY SIDE</p>
+            <h2 id="compare-title">See the difference.</h2>
+          </div>
+          <p>Compare the defining ideas of two decades.</p>
+        </div>
+        <div class="e-compare-selectors">
+          <label
+            >From
+            <select
+              id="compare-from"
+              aria-label="First decade to compare"
+            ></select></label
+          ><span aria-hidden="true">⟷</span
+          ><label
+            >To
+            <select
+              id="compare-to"
+              aria-label="Second decade to compare"
+            ></select
+          ></label>
+        </div>
+        <div id="compare-cards" class="e-comparison-grid"></div>
+        <p id="compare-note" class="e-date-note" aria-live="polite"></p>
+      </section>
+      <section class="e-closing">
+        <div>
+          <p class="eyebrow">THE STORY KEEPS MOVING</p>
+          <h2>The road changes.<br />Our curiosity doesn’t.</h2>
+        </div>
+        <a class="primary-button" href="index.html#catalogue"
+          >Back to the collection <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <a class="footer-brand" href="index.html">CAR CATALOGUE.</a
+      ><span>A collection by Yazan Fattal</span><span>1970s → 2030</span>
+    </footer>
+    <dialog id="e-car-modal" aria-labelledby="e-modal-title">
+      <button
+        id="e-modal-close"
+        class="modal-close"
+        aria-label="Close historical car details"
+      >
+        ×
+      </button>
+      <div class="e-modal-photo"><img id="e-modal-image" alt="" /></div>
+      <div class="e-modal-copy">
+        <p id="e-modal-year" class="eyebrow"></p>
+        <h2 id="e-modal-title"></h2>
+        <p id="e-modal-detail"></p>
+        <a
+          id="e-modal-source"
+          class="source-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Read the manufacturer’s story ↗</a
+        >
+        <p id="e-modal-context" class="e-date-note"></p>
+        <div id="e-modal-credit" class="photo-credit"></div>
+      </div>
+    </dialog>
+    <noscript
+      ><p class="noscript">
+        Please enable JavaScript to explore the interactive timeline.
+      </p></noscript
+    >
+  </body>
+</html>

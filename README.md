@@ -13,6 +13,13 @@ Open `index.html` directly, or serve this directory with any static server (for 
 - Save favourites locally in the browser. No account or remote storage.
 - Keyboard-accessible details dialogs, original Mustang and Blazer photo galleries, and four original engine recordings. Audio starts only when requested and stops when the dialog closes.
 - Local vehicle photos and per-image attribution links in the details dialog. Full credits are in `photo-credits.json`.
+- An Evolution tab (`evolution.html`) with six decade overviews from the 1970s through the 2020s, plus a clearly labelled 2030 outlook. It includes 18 historical production models, three documented concepts, manufacturer source links, photo credits, keyboard-accessible decade tabs, deep links, and side-by-side decade comparisons.
+
+## Evolution content
+
+Edit `evolution-data.js` to update the selected eras and examples. The year attached to a car marks a model or generation launch, market introduction, or concept reveal; a photograph may show a later example within that generation. The 2020s are still in progress, and the 2030 section is an outlook using earlier concepts, not a list of confirmed future production cars. The historical summaries describe selected themes rather than claiming to cover every region or every car.
+
+Evolution photos are stored in `images/evolution/`. Their author, file-page and licence information is available in each car's details and in `evolution-photo-credits.json`.
 
 ## Collection scope
 
