@@ -1,68 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Catalogue</title>
-
-  <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="shortcut icon" href="images/favicon.png">
-  <link rel="stylesheet" href="style.css "/>
-</head>
-<div id="carModal" class="modal">
-
-  <div class="modal-content">
-
-    <span class="close-modal">&times;</span>
-
-    <img id="modalImage">
-
-    <h2 id="modalName"></h2>
-
-    <p id="modalPower"></p>
-    <p id="modalSize"></p>
-    <p id="modalPrice"></p>
-
-    <button id="playSoundBtn">
-      Play Engine Sound
-    </button>
-
-  </div>
-
-</div>
-<body>
-
-  <header>
-    <h1>Car Catalogue</h1>
-    <p>Select a region to explore car brands</p>
-  </header>
-
-  <main>
-    <section class="regions">
-      <button onclick="showBrands('USA')">🇺🇸 USA</button>
-      <button onclick="showBrands('Europe')">🇪🇺 Europe</button>
-      <button onclick="showBrands('Asia')">🌏 Asia</button>
-    </section>
-
-    <section>
-      <h2 id="section-title">Choose a region</h2>
-      <div id="brands-container" class="grid"></div>
-    </section>
-
-    <section>
-      <h2 id="cars-title"></h2>
-      <div id="cars-container" class="grid"></div>
-    </section>
-  </main>
-
-   <!-- Mustang Sound -->
-<audio id="mustangSound" src="sounds/mustang.mp3"></audio>
-<audio id="blazerSound" src="sounds/blazer.mp3"></audio>
-<audio id="porsche911Sound" src="sounds/porsche911.mp3"></audio>
-<audio id="supraSound" src="sounds/supra.mp3"></audio>
-
-<script src="script.js"></script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#122b4a" />
+    <meta
+      name="description"
+      content="A world of cars, in one collection. Explore 144 models from 36 brands, save your favourites and discover the details."
+    />
+    <title>Car Catalogue — A world of cars.</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogue">Skip to catalogue</a>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Car Catalogue home"
+        ><span class="monogram">CC<span>↗</span></span
+        ><span>CAR<br />CATALOGUE<span class="wordmark-dot">.</span></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="#catalogue">The catalogue</a
+        ><a class="nav-link" href="#about">About the collection</a>
+      </nav>
+      <button class="saved-button" id="saved-toggle" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+          /></svg
+        ><span>Saved</span><span id="saved-count" class="saved-count">0</span>
+      </button>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="tiny-line"></span> FOR THE LOVE OF THE DRIVE
+          </p>
+          <h1 id="hero-title">
+            A world of cars.<br /><span>Yours to explore.</span>
+          </h1>
+          <p class="hero-description">
+            Everyday icons. Weekend dreams. Discover the cars<br
+              class="desktop-break"
+            />
+            that make you look twice.
+          </p>
+          <a class="primary-button" href="#catalogue"
+            >Explore the collection <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <span class="hero-outline" aria-hidden="true">911</span
+          ><img
+            src="images/cars/porsche911.png"
+            alt="Porsche 911 Carrera S"
+            fetchpriority="high"
+          />
+          <div class="hero-caption">
+            <span>IN THE SPOTLIGHT</span><strong>Porsche 911</strong
+            ><a
+              href="#catalogue"
+              id="spotlight-link"
+              aria-label="View Porsche 911 details"
+              >↗</a
+            >
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <p>
+            <span class="status-dot"></span> ONE COLLECTION. ENDLESS CURIOSITY.
+          </p>
+          <div class="collection-stats">
+            <span><strong id="model-count">144</strong> models</span
+            ><span><strong id="brand-count">36</strong> brands</span
+            ><span><strong>03</strong> regions</span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="catalogue"
+        id="catalogue"
+        aria-labelledby="catalogue-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2 id="catalogue-title">Find your kind of car.</h2>
+          </div>
+          <p>From the familiar to the extraordinary.</p>
+        </div>
+        <div class="discovery-bar">
+          <div class="region-tabs" role="group" aria-label="Filter by region">
+            <button
+              class="region-tab active"
+              data-region="all"
+              aria-pressed="true"
+            >
+              All regions</button
+            ><button class="region-tab" data-region="USA" aria-pressed="false">
+              USA <span>↗</span></button
+            ><button
+              class="region-tab"
+              data-region="Europe"
+              aria-pressed="false"
+            >
+              Europe <span>↗</span></button
+            ><button class="region-tab" data-region="Asia" aria-pressed="false">
+              Asia <span>↗</span>
+            </button>
+          </div>
+          <label class="search-box"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" /></svg
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search a brand or model…"
+              aria-label="Search a brand or model"
+          /></label>
+        </div>
+        <div class="filter-row">
+          <div class="filter-fields">
+            <label
+              ><span>Brand</span
+              ><select id="brand-filter" aria-label="Filter by brand">
+                <option value="all">All brands</option>
+              </select></label
+            ><label
+              ><span>Body style</span
+              ><select id="body-filter" aria-label="Filter by body style">
+                <option value="all">All body styles</option>
+              </select></label
+            ><button id="reset-filters" class="text-button" hidden>
+              Clear filters <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <label class="sort-label"
+            ><span>Sort by</span
+            ><select id="sort" aria-label="Sort cars">
+              <option value="featured">Featured</option>
+              <option value="az">Brand: A–Z</option>
+              <option value="za">Brand: Z–A</option>
+              <option value="model">Model: A–Z</option>
+            </select></label
+          >
+        </div>
+        <div class="results-line">
+          <p id="results-count" role="status" aria-live="polite"></p>
+          <span id="view-label">A closer look starts here</span>
+        </div>
+        <div id="cars-container" class="car-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">↗</span>
+          <h3>No cars found. Keep exploring.</h3>
+          <p>Try another model, brand or body style.</p>
+          <button class="primary-button" id="empty-reset">
+            Reset your filters
+          </button>
+        </div>
+        <div class="load-more-wrap">
+          <p id="progress-text"></p>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+          <button id="load-more" class="outline-button">
+            Discover more cars <span aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div>
+          <p class="eyebrow">BUILT FOR THE CURIOUS</p>
+          <h2>Some cars get you there.<br />Others stay with you.</h2>
+        </div>
+        <div>
+          <p>
+            A personal collection by Yazan Fattal, made for the joy of
+            discovering cars. Browse model families from around the world,
+            collect your favourites, and hear a few of the originals.
+          </p>
+          <p class="small-print">
+            This is a curated collection of modern and classic models. Photos
+            may show different generations or trims; availability and
+            specifications vary by year and market. Photo sources and licences
+            are linked in each car’s details.
+          </p>
+          <a href="#catalogue" class="about-link"
+            >Back to the collection <span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-brand" href="#">CAR CATALOGUE.</a
+      ><span>A collection by Yazan Fattal</span
+      ><span>Made for the drive. ↗</span>
+    </footer>
+    <dialog id="car-modal" aria-labelledby="modal-name">
+      <button
+        class="modal-close icon-button"
+        id="close-modal"
+        aria-label="Close car details"
+      >
+        ×
+      </button>
+      <div class="modal-photo">
+        <img id="modal-image" alt="" /><button
+          id="photo-prev"
+          class="gallery-button prev"
+          aria-label="Previous car photo"
+          hidden
+        >
+          ‹</button
+        ><button
+          id="photo-next"
+          class="gallery-button next"
+          aria-label="Next car photo"
+          hidden
+        >
+          ›</button
+        ><span id="photo-count" hidden></span>
+      </div>
+      <div class="modal-details">
+        <p id="modal-brand" class="eyebrow"></p>
+        <h2 id="modal-name"></h2>
+        <div id="modal-tags" class="modal-tags"></div>
+        <p class="modal-description">
+          Get to know the model, its history and the details that make it
+          distinctive.
+        </p>
+        <div class="modal-actions">
+          <button id="modal-save" class="outline-button"></button
+          ><button id="play-sound" class="primary-button" hidden>
+            Play engine sound <span aria-hidden="true">♫</span>
+          </button>
+        </div>
+        <p id="audio-status" class="small-print" role="status"></p>
+        <a
+          id="model-source"
+          class="source-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Explore the model on Wikipedia ↗</a
+        >
+        <p class="small-print model-note">
+          Model family reference. Photo, engine and trim may differ. Recordings
+          are from the original collection.
+        </p>
+        <div id="photo-credit" class="photo-credit"></div>
+      </div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript
+      ><p class="noscript">
+        Please enable JavaScript to browse the car collection.
+      </p></noscript
+    >
+  </body>
 </html>
